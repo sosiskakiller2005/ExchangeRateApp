@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exchane_Rate_App.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Курс валют" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <StackLayout Orientation="Horizontal">
+            <Entry x:Name="firstEntry" WidthRequest="120" FontSize="25" Placeholder="Введите сумму"/>
+            <Label Text="RUB" FontSize="25" Margin="0,12,0,0"/>
+            <Label Text="⇄ " FontSize="40"/>
+            <Picker x:Name="valutePicker" WidthRequest="39" SelectedIndexChanged="Picker_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>RUB Российский рубль</x:String>
+                    <x:String>USD Доллар США</x:String>
+                    <x:String>EUR Евро</x:String>
+                    <x:String>CNY Китайский юань</x:String>
+                </Picker.Items>
+            </Picker>
+            <Entry x:Name="secondEntry" WidthRequest="120" FontSize="25"/>
+        </StackLayout>
+        
+    </StackLayout>
+
+</ContentPage>
